@@ -1,0 +1,28 @@
+body {
+	background: #0F2027;  
+	color: #865DFF;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+#container{
+	margin: 1% auto 5% auto;
+	max-width: 70%;
+	text-align: center;
+}
+#shufflingMoves {
+	padding: 2% 4%;
+	font-size: 24px;
+	color: #FFA3FD;
+}
+#heading {
+	font-size: 50px;
+}
+#generatorButton {
+	padding : 2%;
+	background: #0f0c29;  
+	background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+	background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+	border : 4px solid #302b63; 
+	color: #a17fe0;
+	font-size: 18px;
+}

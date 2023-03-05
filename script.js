@@ -36,8 +36,8 @@ function getShuffledEdgeMoves(){
 
 function getRandomMove(lastMove) {
 	if(lastMove) {
-		let faceMoves = ["F","B","F'","B'"];
-		let sideMoves = ["R", "L", "R'", "L'"];
+		let faceMoves = getShuffledFaceMoves();
+		let sideMoves = getShuffledSideMoves();
 		if(faceMoves.includes(lastMove)){
 			return getRandomMoveFromListsOfMoves(shuffle([getShuffledSideMoves(), getShuffledEdgeMoves()]));
 		} else if(sideMoves.includes(lastMove)){
@@ -64,4 +64,7 @@ function getRandomShuffleMoves(numMoves) {
 }
 
 shufflingMovesGeneratorButton.addEventListener("click", () =>
+	result.innerHTML = getRandomShuffleMoves(minMoves + Math.floor(Math.random()*(maxMoves - minMoves + 1))));
+
+document.addEventListener("DOMContentLoaded", () =>
 	result.innerHTML = getRandomShuffleMoves(minMoves + Math.floor(Math.random()*(maxMoves - minMoves + 1))));
